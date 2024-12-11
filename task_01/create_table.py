@@ -1,6 +1,6 @@
 from psycopg2 import DatabaseError
-from connect import create_connect
-from logger_config import get_logger
+from task_01.connect import create_connect
+from task_01.logger_config import get_logger
 
 logger = get_logger(__name__)
 

@@ -1,8 +1,8 @@
 import psycopg2
 from contextlib import contextmanager
-from config import DB_CONFIG
+from task_01.config import DB_CONFIG
 
-from logger_config import get_logger
+from task_01.logger_config import get_logger
 
 logger = get_logger(__name__)
 

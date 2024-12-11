@@ -1,5 +1,5 @@
-from connect import create_connect
-from logger_config import get_logger
+from task_01.connect import create_connect
+from task_01.logger_config import get_logger
 
 # Ініціалізація логера
 logger = get_logger(__name__)
