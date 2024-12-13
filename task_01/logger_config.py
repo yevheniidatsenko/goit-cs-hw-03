@@ -30,7 +30,7 @@ def get_logger(name: str, level=logging.INFO):
     :return: Логер
     """
     logger = logging.getLogger(name)
-    if not logger.hasHandlers():  # Уникаємо дублювання обробників
+    if not logger.hasHandlers():
         logger.setLevel(level)
         console_handler = logging.StreamHandler()
         console_handler.setFormatter(ColorFormatter(

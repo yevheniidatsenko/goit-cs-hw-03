@@ -18,12 +18,11 @@ def insert_data(conn, sql_stmt: str, data: list, table_name: str):
         conn.commit()
         logger.info(f"Data inserted into '{table_name}' successfully.")
     except DatabaseError as err:
-        logger.error(f"Database error while inserting into '{
-                     table_name}': {err}")
+        logger.error(f"Database error while inserting into '{table_name}': {err}")
         conn.rollback()
     finally:
         c.close()
-
+        
 
 if __name__ == "__main__":
     try:

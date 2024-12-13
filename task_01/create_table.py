@@ -4,7 +4,6 @@ from task_01.logger_config import get_logger
 
 logger = get_logger(__name__)
 
-
 def create_table(conn, sql_stmt: str, table_name: str):
     """
     Виконує SQL-запит для створення таблиці та логує результат
@@ -16,8 +15,7 @@ def create_table(conn, sql_stmt: str, table_name: str):
         conn.commit()
         logger.info(f"Table '{table_name}' created successfully.")
     except DatabaseError as err:
-        logger.error(f"Database error while creating table '{
-                     table_name}': {err}")
+        logger.error(f"Database error while creating table '{table_name}': {err}")
         conn.rollback()
     finally:
         c.close()
